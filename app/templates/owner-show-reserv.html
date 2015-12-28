@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Zarina Restaurant</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/reserve.css">
+    <link rel="stylesheet" href="css/check.css">
+    <link rel="stylesheet" href="css/owner-css.css">
+
+    <div class="navbar navbar-inverse navbar-fixed">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+
+
+                </button>
+                <a class="navbar-brand" href="#">
+                    Zarina's Kitchen</a>
+            </div>
+            <div class="navbar-collapse collapse" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/make_reservation" >Reserve a table</a></li>
+                    <li><a href="#/check_status">Check status</a></li>
+                    <li><a href="#/owner-login">Owner</a></li>
+                    <li><a href="#/contact_form">Contact</a></li>
+
+                </ul>
+            </div>
+
+
+
+        </div><!--/.navbar-collapse -->
+    </div><!--container-->
+    </div><!--navbar-->
+</header>
+<body>
+<div class="container">
+
+    <div class=" col-md-6">
+        <div class="form-group has-success">
+            <label class="control-label"></label>
+            <span>
+        <i class="glyphicon glyphicon-search"></i>
+    </span>
+        </div>
+        <hr>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr class="info">
+                <th> Confirmation Number</th>
+                <th> Name</th>
+                <th> Email</th>
+
+                <th> Date and Time</th>
+                <th>Status </th>
+                <th>Table No. </th>
+
+                <th > Table</th>
+
+                <th> Delete </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr ng-repeat="p in ownerVm.allReservations">
+                <td><span class="glyphicon glyphicon-user"></span></td>
+                <td></td>
+
+                <td></td>
+
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td class="text-center">
+
+                    <td class="btn btn-success">Assign</td>
+
+                </td>
+                <td class="text-center"><span class="glyphicon glyphicon-trash"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+<style>
+
+    .changethisone span{
+        background-color: #FFF;
+    }
+
+    .changethisone input{
+        border-right-style:none;
+    }
+
+</style>
+</body>
+</html>
